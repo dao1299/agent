@@ -1,0 +1,21 @@
+{
+  "name": "netat-automation-agent",
+  "version": "1.0.0",
+  "description": "Hệ thống AI Agent tự động hóa test case từ Manual sang Java NetAT Script, sử dụng pipeline 3 agent: Explorer, Coder, Debugger.",
+  "framework": "NetAT",
+  "language": "java",
+  "model": "claude",
+  "pipeline": {
+    "agents": ["agent1_explorer", "agent2_coder", "agent3_debugger"],
+    "orchestrator": "automate-test-case",
+    "flow": "sequential",
+    "self_healing": true,
+    "max_retries": 3
+  },
+  "references": {
+    "docs": "docs/",
+    "rules": ".agent/rules/",
+    "workflows": ".agent/workflows/",
+    "skills": ".agent/skills/"
+  }
+}
